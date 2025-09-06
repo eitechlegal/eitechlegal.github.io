@@ -67,10 +67,23 @@
         }
 
         .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo-img {
+            height: 20px;
+            width: auto;
+            margin-right: 8px;
+            object-fit: contain;
+        }
+
+        .logo-text {
             font-size: 1.5rem;
             font-weight: 700;
             color: var(--white);
-            text-decoration: none;
         }
 
         .nav-menu {
@@ -749,7 +762,7 @@
                         
                         <div class="form-group">
                             <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" placeholder="your.email@company.com" required>
+                            <input type="email" id="email" name="email" placeholder="eitechlegal@company.com" required>
                         </div>
                         
                         <div class="form-group">
