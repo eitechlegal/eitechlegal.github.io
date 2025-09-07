@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>India Legal-Tech & Compliance - EiTech Legal | Property Document Verification</title>
+    <meta name="description" content="India-focused legal-tech services including property document verification, DPDP Act compliance, cybersecurity, and AI governance solutions.">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚖️</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #3b82f6;
+            --primary-dark: #1d4ed8;
+            --dark-navy: #0f172a;
+            --medium-navy: #1e293b;
+            --light-gray: #f8fafc;
+            --text-dark: #1a1a1a;
+            --text-medium: #64748b;
+            --text-light: #cbd5e1;
+            --white: #ffffff;
+            --success-green: #10b981;
+            --india-orange: #ff9933;
+            --india-green: #138808;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background: var(--light-gray);
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 1rem 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: var(--white);
+        }
+
+        .logo-img {
+            height: 48px;
+            width: auto;
+            margin-right: 15px;
+            object-fit: contain;
+        }
+
+        .logo-text {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .nav-menu {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-menu a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+            color: var(--white);
+        }
+
+        /* Main Content */
+        .main-content {
+            margin-top: 100px;
+            padding: 4rem 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .page-header {
+            text-align: center;
+            margin-bottom: 4rem;
+            background: linear-gradient(135deg, var(--india-orange), var(--india-green));
+            color: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.1"><circle cx="30" cy="30" r="1"/></g></svg>') repeat;
+            opacity: 0.3;
+        }
+
+        .page-header > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .page-title {
+            font-size: clamp(2.5rem, 4vw, 3.5rem);
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .page-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .breadcrumb {
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+            color: var(--text-medium);
+        }
+
+        .breadcrumb a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        .breadcrumb a:hover {
+            text-decoration: underline;
+        }
+
+        /* Featured Service */
+        .featured-service {
+            background: var(--white);
+            padding: 3rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+            margin-bottom: 3rem;
+            border-left: 6px solid var(--india-orange);
+        }
+
+        .featured-title {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .featured-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--india-orange), var(--india-green));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .featured-description {
+            font-size: 1.1rem;
+            color: var(--text-medium);
+            margin-bottom: 2rem;
+            line-height: 1.8;
+        }
+
+        .featured-link {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--india-orange), var(--india-green));
+            color: var(--white);
+            padding: 1rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+        }
+
+        .featured-link:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(255, 153, 51, 0.4);
+        }
+
+        /* Resources Grid */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .resource-category {
+            background: var(--white);
+            padding: 2.5rem;
+            border-radius: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            border: 1px solid #e2e8f0;
+            transition: all 0.3s ease;
+        }
+
+        .resource-category:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+        }
+
+        .category-icon {
+            width: 60px;
+            height: 60px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-dark));
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.5rem;
+            font-size: 1.5rem;
+            color: var(--white);
+        }
+
+        .category-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-dark);
+            margin-bottom: 1rem;
+        }
+
+        .category-description {
+            color: var(--text-medium);
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .resource-links {
+            list-style: none;
+        }
+
+        .resource-links li {
+            margin-bottom: 0.75rem;
+        }
+
+        .resource-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            display: block;
+            padding: 0.5rem 0;
+        }
+
+        .resource-link:hover {
+            color: var(--primary-dark);
+            padding-left: 0.5rem;
+        }
+
+        .resource-link::before {
+            content: '→';
+            margin-right: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .resource-link:hover::before {
+            margin-right: 0.75rem;
+        }
+
+        .external-link::after {
+            content: ' ↗';
+            font-size: 0.8rem;
+            opacity: 0.7;
+        }
+
+        /* Footer */
+        .footer {
+            background: var(--dark-navy);
+            color: var(--text-medium);
+            text-align: center;
+            padding: 2rem;
+            margin-top: 4rem;
+        }
+
+        .footer a {
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-content {
+                margin-top: 80px;
+                padding: 2rem 1rem;
+            }
+            
+            .featured-service {
+                padding: 2rem;
+            }
+            
+            .featured-title {
+                font-size: 1.5rem;
+                flex-direction: column;
+                text-align: center;
+            }
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="logo.png" alt="EiTech Legal Logo" class="logo-img" onerror="this.style.display='none'">
+                <span class="logo-text">EiTech Legal</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="index.html#about">About</a></li>
+                <li><a href="resources.html">Resources</a></li>
+                <li><a href="india.html" class="active">India</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="container">
+            <!-- Breadcrumb -->
+            <div class="breadcrumb">
+                <a href="index.html">Home</a> / India Legal-Tech
+            </div>
+
+            <!-- Page Header -->
+            <div class="page-header">
+                <h1 class="page-title">🇮🇳 India Legal-Tech & Compliance</h1>
+                <p class="page-subtitle">
+                    Specialized legal technology solutions for India's evolving regulatory landscape including property document verification, DPDP Act compliance, and AI governance.
+                </p>
+            </div>
+
+            <!-- Featured Service -->
+            <div class="featured-service">
+                <h2 class="featured-title">
+                    <div class="featured-icon">🏠</div>
+                    India Property Document Verification System
+                </h2>
+                <p class="featured-description">
+                    Comprehensive property document verification and legal validation system for India real estate transactions. Verify property documents, check legality, and make informed buying decisions with our advanced verification platform. Essential for property buyers, real estate professionals, and legal practitioners operating in the Indian property market.
+                </p>
+                <a href="https://oracleapex.com/ords/r/apex_bas02/document-verification-system1/login?session=116424436361647" 
+                   class="featured-link" 
+                   target="_blank">
+                    Access Document Verification System
+                </a>
+            </div>
+
+            <!-- Resources Grid -->
+            <div class="resources-grid">
+                <!-- India Compliance -->
+                <div class="resource-category">
+                    <div class="category-icon">🇮🇳</div>
+                    <h3 class="category-title">India Compliance Framework</h3>
+                    <p class="category-description">Official guidelines and regulatory resources for Indian data protection, cybersecurity, and digital governance compliance.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.meity.gov.in/writereaddata/files/Digital%20Personal%20Data%20Protection%20Act%202023.pdf" class="resource-link external-link" target="_blank">Digital Personal Data Protection Act 2023</a></li>
+                        <li><a href="https://www.cert-in.org.in/" class="resource-link external-link" target="_blank">CERT-In (Indian Computer Emergency Response Team)</a></li>
+                        <li><a href="https://www.meity.gov.in/" class="resource-link external-link" target="_blank">Ministry of Electronics & IT (MeitY)</a></li>
+                        <li><a href="https://www.rbi.org.in/Scripts/BS_ViewMasCirculardetails.aspx?id=12266" class="resource-link external-link" target="_blank">RBI Cybersecurity Framework for Banks</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cybersecurity India -->
+                <div class="resource-category">
+                    <div class="category-icon">🔒</div>
+                    <h3 class="category-title">India Cybersecurity</h3>
+                    <p class="category-description">Cybersecurity frameworks, guidelines, and incident response resources specific to Indian organizations and infrastructure.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.nciipc.gov.in/" class="resource-link external-link" target="_blank">National Critical Information Infrastructure Protection Centre</a></li>
+                        <li><a href="https://cybersecuritycouncil.in/" class="resource-link external-link" target="_blank">Data Security Council of India</a></li>
+                        <li><a href="https://www.cert-in.org.in/s2cMainServlet?pageid=PUBVLNOTES01&VLCODE=CIVN-2023-0001" class="resource-link external-link" target="_blank">CERT-In Vulnerability Notes</a></li>
+                        <li><a href="https://www.meity.gov.in/content/cyber-security" class="resource-link external-link" target="_blank">National Cyber Security Strategy</a></li>
+                    </ul>
+                </div>
+
+                <!-- AI Governance India -->
+                <div class="resource-category">
+                    <div class="category-icon">🤖</div>
+                    <h3 class="category-title">AI Governance & Ethics</h3>
+                    <p class="category-description">India's artificial intelligence governance framework, ethical guidelines, and regulatory developments for AI implementation.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.niti.gov.in/national-strategy-artificial-intelligence" class="resource-link external-link" target="_blank">NITI Aayog National AI Strategy</a></li>
+                        <li><a href="https://www.meity.gov.in/content/artificial-intelligence" class="resource-link external-link" target="_blank">MeitY AI Guidelines</a></li>
+                        <li><a href="https://indiaai.gov.in/" class="resource-link external-link" target="_blank">IndiaAI National Portal</a></li>
+                        <li><a href="#" class="resource-link">AI Ethics Framework (Coming Soon)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Legal Tech Tools India -->
+                <div class="resource-category">
+                    <div class="category-icon">⚖️</div>
+                    <h3 class="category-title">India Legal Tech Tools</h3>
+                    <p class="category-description">Legal technology platforms, document management systems, and digital tools designed for Indian legal and compliance requirements.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://oracleapex.com/ords/r/apex_bas02/document-verification-system1/login?session=116424436361647" class="resource-link external-link" target="_blank">Property Document Verification System</a></li>
+                        <li><a href="https://districts.ecourts.gov.in/" class="resource-link external-link" target="_blank">eCourts India - Case Status</a></li>
+                        <li><a href="https://www.mca.gov.in/" class="resource-link external-link" target="_blank">Ministry of Corporate Affairs Portal</a></li>
+                        <li><a href="#" class="resource-link">Contract Management Platform (Coming Soon)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Cross-border Compliance -->
+                <div class="resource-category">
+                    <div class="category-icon">🌏</div>
+                    <h3 class="category-title">India-Singapore Cross-border</h3>
+                    <p class="category-description">Frameworks and guidelines for cross-border data flows, business operations, and compliance between India and Singapore.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.enterprisesg.gov.sg/industries/hub/startups/country-guides/india" class="resource-link external-link" target="_blank">Enterprise Singapore - India Guide</a></li>
+                        <li><a href="https://www.investindia.gov.in/singapore" class="resource-link external-link" target="_blank">Invest India - Singapore Partnership</a></li>
+                        <li><a href="#" class="resource-link">Data Localization Guidelines (Coming Soon)</a></li>
+                        <li><a href="#" class="resource-link">Cross-border Legal Framework (Coming Soon)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Emergency Contacts India -->
+                <div class="resource-category">
+                    <div class="category-icon">🚨</div>
+                    <h3 class="category-title">India Emergency Contacts</h3>
+                    <p class="category-description">Critical contact information for cybersecurity incidents, data breaches, and urgent legal matters in India.</p>
+                    <ul class="resource-links">
+                        <li><a href="https://www.cert-in.org.in/s2cMainServlet?pageid=PUBINCIDENTREP" class="resource-link external-link" target="_blank">CERT-In Incident Reporting</a></li>
+                        <li><a href="https://cybercrime.gov.in/" class="resource-link external-link" target="_blank">National Cybercrime Reporting Portal</a></li>
+                        <li><a href="tel:1930" class="resource-link">Cybercrime Helpline: 1930</a></li>
+                        <li><a href="mailto:eitechlegal@gmail.com" class="resource-link">EiTech Legal India Support</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 EiTech Advisory Group. All rights reserved. | <a href="index.html">Return to Homepage</a> | <a href="resources.html">Singapore Resources</a></p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for all links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
