@@ -263,36 +263,6 @@
             }
         }
 
-        /* Back to top button */
-        .back-to-top {
-            position: fixed;
-            bottom: 2rem;
-            right: 2rem;
-            background: var(--primary-blue);
-            color: var(--white);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
-            transition: all 0.3s ease;
-            opacity: 0;
-            visibility: hidden;
-        }
-
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-
-        .back-to-top:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 8px 25px rgba(59, 130, 246, 0.4);
-        }
-
         html {
             scroll-behavior: smooth;
         }
@@ -311,6 +281,7 @@
                 <li><a href="index.html#services">Services</a></li>
                 <li><a href="index.html#about">About</a></li>
                 <li><a href="resources.html" class="active">Resources</a></li>
+                <li><a href="india.html">India</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </div>
@@ -366,10 +337,10 @@
                     <h3 class="category-title">Legal Tech Tools</h3>
                     <p class="category-description">Specialized tools and platforms for legal document management, verification, and compliance automation.</p>
                     <ul class="resource-links">
-                        <li><a href="https://oracleapex.com/ords/r/apex_bas02/document-verification-system1/login?session=114299720702634" class="resource-link external-link" target="_blank">Document Verification System</a></li>
                         <li><a href="#" class="resource-link">Contract Management Platform (Coming Soon)</a></li>
                         <li><a href="#" class="resource-link">Policy Template Generator (Coming Soon)</a></li>
                         <li><a href="#" class="resource-link">Compliance Audit Tracker (Coming Soon)</a></li>
+                        <li><a href="india.html" class="resource-link">India Property Document Verification</a></li>
                     </ul>
                 </div>
 
@@ -418,29 +389,11 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 EiTech Advisory Group. All rights reserved. | <a href="index.html">Return to Homepage</a></p>
+            <p>&copy; 2025 EiTech Advisory Group. All rights reserved. | <a href="index.html">Return to Homepage</a> | <a href="india.html">India Resources</a></p>
         </div>
     </footer>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop">↑</a>
-
     <script>
-        // Back to top button functionality
-        window.addEventListener('scroll', function() {
-            const backToTop = document.getElementById('backToTop');
-            if (window.scrollY > 300) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
-        });
-
-        document.getElementById('backToTop').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
         // Smooth scrolling for all links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
