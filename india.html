@@ -324,9 +324,23 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-            .nav-menu {
-                display: none;
-            }
+        .nav-menu {
+        display: none;
+        }    
+    
+        .nav-menu.mobile-active {
+            display: flex;
+            flex-direction: column;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            right: 0;
+            background: var(--dark-navy);
+            padding: 1rem 2rem;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 0 0 10px 10px;
+        }
+       }
             
             .resources-grid {
                 grid-template-columns: 1fr;
@@ -504,6 +518,11 @@
                     target.scrollIntoView({ behavior: 'smooth', block: 'start' });
                 }
             });
+        });
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('mobile-active');
         });
     </script>
 </body>
