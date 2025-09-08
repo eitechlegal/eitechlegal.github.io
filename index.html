@@ -814,6 +814,12 @@
                 loader.classList.add('hidden');
             }, 1000);
         });
+        
+        // Mobile menu toggle
+        document.getElementById('mobileMenuBtn').addEventListener('click', function() {
+        const navMenu = document.querySelector('.nav-menu');
+        navMenu.classList.toggle('mobile-active');
+        });
 
         // Navbar scroll effect
         window.addEventListener('scroll', function() {
