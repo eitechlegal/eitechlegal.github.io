@@ -142,6 +142,52 @@
             font-size: clamp(2.5rem, 4vw, 3.5rem);
             font-weight: 700;
             margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        /* CSS Indian Flag */
+        .india-flag {
+            width: 54px;
+            height: 36px;
+            border-radius: 6px;
+            background: linear-gradient(to bottom, 
+                #ff9933 0%, #ff9933 33.33%, 
+                #ffffff 33.33%, #ffffff 66.66%, 
+                #138808 66.66%, #138808 100%);
+            position: relative;
+            display: inline-block;
+            vertical-align: middle;
+            box-shadow: 0 3px 12px rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .india-flag::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 18px;
+            height: 18px;
+            border: 2px solid #000080;
+            border-radius: 50%;
+            background: transparent;
+        }
+
+        .india-flag::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 14px;
+            height: 14px;
+            background: radial-gradient(circle, transparent 25%, #000080 25%, #000080 35%, transparent 35%);
+            z-index: 2;
         }
 
         .page-subtitle {
@@ -257,6 +303,43 @@
             color: var(--white);
         }
 
+        /* Fix category icons that use flag emoji */
+        .category-icon.india-flag-icon {
+            background: linear-gradient(135deg, var(--india-orange), var(--india-green));
+            position: relative;
+            font-size: 0; /* Hide any text */
+        }
+
+        .category-icon.india-flag-icon::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 32px;
+            height: 21px;
+            background: linear-gradient(to bottom, 
+                #ff9933 0%, #ff9933 33.33%, 
+                #ffffff 33.33%, #ffffff 66.66%, 
+                #138808 66.66%, #138808 100%);
+            border-radius: 3px;
+            border: 1px solid rgba(255,255,255,0.3);
+        }
+
+        .category-icon.india-flag-icon::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 10px;
+            height: 10px;
+            border: 1px solid #000080;
+            border-radius: 50%;
+            background: transparent;
+            z-index: 3;
+        }
+
         .category-title {
             font-size: 1.4rem;
             font-weight: 600;
@@ -324,9 +407,9 @@
 
         /* Responsive */
         @media (max-width: 768px) {
-        .nav-menu {
-        display: none;
-        }    
+            .nav-menu {
+                display: none;
+            }    
               
             .resources-grid {
                 grid-template-columns: 1fr;
@@ -345,6 +428,17 @@
                 font-size: 1.5rem;
                 flex-direction: column;
                 text-align: center;
+            }
+
+            .page-title {
+                font-size: 2rem;
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            
+            .india-flag {
+                width: 45px;
+                height: 30px;
             }
         }
 
@@ -382,7 +476,10 @@
 
             <!-- Page Header -->
             <div class="page-header">
-                <h1 class="page-title">🇮🇳 India Legal-Tech & Compliance</h1>
+                <h1 class="page-title">
+                    <span class="india-flag"></span>
+                    India Legal-Tech & Compliance
+                </h1>
                 <p class="page-subtitle">
                     Specialized legal technology solutions for India's evolving regulatory landscape including property document verification, DPDP Act compliance, and AI governance.
                 </p>
@@ -408,7 +505,7 @@
             <div class="resources-grid">
                 <!-- India Compliance -->
                 <div class="resource-category">
-                    <div class="category-icon">🇮🇳</div>
+                    <div class="category-icon india-flag-icon"></div>
                     <h3 class="category-title">India Compliance Framework</h3>
                     <p class="category-description">Official guidelines and regulatory resources for Indian data protection, cybersecurity, and digital governance compliance.</p>
                     <ul class="resource-links">
@@ -490,7 +587,7 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 EiTech Advisory Group. All rights reserved. | <a href="index.html">Return to Homepage</a> | <a href="resources.html">Singapore Resources</a></p>
+            <p>&copy; 2025 EiTech Advisory Group. All rights reserved. | <a href="index.html">Return to Homepage</a> | <a href="resources.html">Singapore Resources</a></li>
         </div>
     </footer>
 
