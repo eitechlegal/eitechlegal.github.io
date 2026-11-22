@@ -1,6 +1,6 @@
 # eitechlegal.com
 
-Source for the [EiTech Legal](https://eitechlegal.com) website, operated by EiTech Advisory Group (Singapore). The site describes our DPDP and PDPA compliance, cybersecurity and data security consulting services.
+Source for the [EiTech Advisory Group](https://eitechlegal.com) website (Singapore). The site describes our DPDP and PDPA compliance, cybersecurity and data security consulting services.
 
 EiTech Advisory Group provides compliance and technical consulting only. It is not a law firm and does not provide legal advice.
 

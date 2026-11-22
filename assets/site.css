@@ -18,3 +18,11 @@
   .navbar .nav-menu.open li { list-style: none; }
   .navbar .nav-menu.open a { display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
 }
+
+/* Logo with tagline */
+.logo-text { display: inline-flex; flex-direction: column; line-height: 1.15; }
+.logo-tagline { font-size: 0.68rem; font-weight: 500; letter-spacing: 0.04em; color: #93c5fd; margin-top: 2px; }
+@media (max-width: 420px) {
+  .logo-text { font-size: 1.05rem !important; }
+  .logo-tagline { font-size: 0.6rem; }
+}
