@@ -483,6 +483,23 @@
             min-height: 120px;
         }
 
+        /* Founder profile */
+        .founder-card {
+            background: #f8fafc;
+            border-left: 4px solid var(--primary-blue);
+            border-radius: 10px;
+            padding: 1.25rem 1.5rem;
+            margin: 1.5rem 0;
+        }
+        .founder-card h3 { margin-bottom: 0.75rem; color: var(--text-dark); }
+        .about-text .founder-card p { margin-bottom: 0.75rem; font-size: 1rem; }
+        .founder-certs { margin: 0 0 0 1.25rem; padding: 0; color: var(--text-medium); }
+        .founder-certs li { margin-bottom: 0.25rem; }
+        .form-privacy { font-size: 0.85rem; color: rgba(255,255,255,0.8); margin: 0 0 1rem; }
+        .form-privacy a { color: #fff; text-decoration: underline; }
+        .footer a { color: inherit; text-decoration: underline; }
+        .footer-disclaimer { font-size: 0.85rem; opacity: 0.8; margin-top: 0.5rem; }
+
         /* Footer */
         .footer {
             background: var(--dark-navy);
@@ -706,28 +723,42 @@
                 <div class="about-text">
                     <h2>About EiTech Legal</h2>
                     <p>
-                        EiTech Legal is a boutique advisory firm specializing in legal-tech, cybersecurity, and regulatory compliance. With over 30 years of combined expertise in IT infrastructure and law, we empower businesses to confidently navigate today's complex legal and governance landscapes.
+                        EiTech Legal is a boutique advisory firm specializing in data protection, cybersecurity and regulatory compliance for organisations in Singapore and India. We combine legal training with more than 25 years of hands-on enterprise IT experience, so compliance programmes are grounded in how your systems and data actually work.
                     </p>
-                    <p>
-                        Founded by a seasoned IT leader and Bar Council-registered lawyer, our firm uniquely blends technical depth with legal insight to deliver holistic, risk-aligned, and purpose-driven solutions tailored to your specific needs.
-                    </p>
+                    <div class="founder-card">
+                        <h3>Founder: Baskaran Krishnamoorthy</h3>
+                        <p>
+                            Baskaran is an IT infrastructure leader with more than 25 years of experience across Oracle and multi-platform database administration, storage, data-centre operations and enterprise application development. He currently leads infrastructure operations in a global manufacturing environment.
+                        </p>
+                        <p>
+                            He holds an LLB and a Master's in Law, a Master's in Software Engineering and an MBA, and is certified in security and privacy:
+                        </p>
+                        <ul class="founder-certs">
+                            <li>ISO/IEC 27001 Lead Auditor</li>
+                            <li>CCISO (Certified Chief Information Security Officer)</li>
+                            <li>CEH (Certified Ethical Hacker)</li>
+                            <li>CompTIA CySA+</li>
+                            <li>Microsoft Azure Security Engineer (AZ-500)</li>
+                            <li>Personal data protection certification</li>
+                        </ul>
+                    </div>
                     
                     <div class="stats-grid">
                         <div class="stat-item">
-                            <span class="stat-number">30+</span>
-                            <span class="stat-label">Years Combined Expertise</span>
+                            <span class="stat-number">25+</span>
+                            <span class="stat-label">Years in Enterprise IT</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Compliance Focused</span>
+                            <span class="stat-number">SG + IN</span>
+                            <span class="stat-label">PDPA &amp; DPDP Compliance</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">24/7</span>
-                            <span class="stat-label">Support Available</span>
+                            <span class="stat-number">ISO 27001</span>
+                            <span class="stat-label">Lead Auditor</span>
                         </div>
                         <div class="stat-item">
-                            <span class="stat-number">Global</span>
-                            <span class="stat-label">Service Delivery</span>
+                            <span class="stat-number">Remote</span>
+                            <span class="stat-label">&amp; On-site Delivery</span>
                         </div>
                     </div>
                 </div>
@@ -797,6 +828,7 @@
                             <textarea id="message" name="message" placeholder="Tell us about your legal-tech or compliance needs..." required></textarea>
                         </div>
                         
+                        <p class="form-privacy">By sending this form, you agree that we may use your details to respond to your enquiry, as described in our <a href="privacy.html">Privacy Policy</a>.</p>
                         <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                     </form>
                 </div>
@@ -807,7 +839,8 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2025 EiTech Advisory Group. All rights reserved. | Legal-Tech & Compliance Specialists</p>
+            <p>&copy; 2026 EiTech Legal. All rights reserved. | <a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms of Use</a></p>
+            <p class="footer-disclaimer">EiTech Legal provides compliance and technical consulting services only. It is not a law firm and does not provide legal advice.</p>
         </div>
     </footer>
 
