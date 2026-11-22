@@ -1,0 +1,20 @@
+/* Shared mobile navigation */
+.mobile-menu-btn { display: none; background: none; border: none; color: #fff; font-size: 1.6rem; cursor: pointer; line-height: 1; padding: 0.25rem 0.5rem; }
+@media (max-width: 768px) {
+  .mobile-menu-btn { display: block; }
+  .navbar .nav-menu.open {
+    display: flex !important;
+    flex-direction: column;
+    gap: 0;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    margin: 0;
+    padding: 0.5rem 1.5rem 1rem;
+    background: #0f172a;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  }
+  .navbar .nav-menu.open li { list-style: none; }
+  .navbar .nav-menu.open a { display: block; padding: 0.75rem 0; border-bottom: 1px solid rgba(255, 255, 255, 0.08); }
+}
